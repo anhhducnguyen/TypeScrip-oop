@@ -57,7 +57,7 @@ abstract class Person {
         return this.vb;
     }
 
-    abstract moneyPay(): number;
+    // abstract moneyPay(): number;
 
     display(): void {
         console.log(`Name: ${this.name}`);
@@ -65,7 +65,21 @@ abstract class Person {
         console.log(`Address: ${this.add}`);
         console.log("List Book Borrowed:");
         this.vb.forEach(book => book.display());
-        console.log(`Money Pay: ${this.moneyPay()}`);
+        // console.log(`Money Pay: ${this.moneyPay()}`);
+    }
+}
+
+class Children extends Person {
+    display(): void {
+        console.log("Children!");
+        super.display();
+    }
+}
+
+class Adult extends Person {
+    display(): void {
+        console.log("Adult!");
+        super.display();
     }
 }
 
