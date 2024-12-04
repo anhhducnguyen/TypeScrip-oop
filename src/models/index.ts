@@ -94,6 +94,14 @@ function main() {
     ];
 
     books.forEach(book => book.display());
+
+    const childrens: Children[] = [
+        new Children("A", 10, "HN", [books[0], books[1]]),
+        new Children("B", 20, "HN", [books[2], books[3], books[4]]),
+        new Children("C", 30, "HN", [books[3], books[4]]),
+    ];
+
+    childrens.forEach(children => children.display());
 }
 
 main();
